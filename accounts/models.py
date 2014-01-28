@@ -4,10 +4,10 @@ from flask import current_app
 
 from datetime import datetime
 from application import db
-from common.models import BaseDocument
+from core.models import Base
 
 
-class User(BaseDocument):
+class User(Base):
 
     username = db.StringField(
         verbose_name=u'login',

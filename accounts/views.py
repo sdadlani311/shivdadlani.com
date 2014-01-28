@@ -4,11 +4,8 @@ from flask import (
     current_app
 )
 from accounts.models import User
-from accounts.forms import (
-    LoginForm, SignupForm, SignupConfirmForm, RecoverPasswordForm,
-    RecoverPasswordConfirmForm
-)
-from common.utils import get_signer
+from accounts.forms import LoginForm, SignupForm, SignupConfirmForm, RecoverPasswordForm, RecoverPasswordConfirmForm
+from core.utils import get_signer
 
 
 accounts_app = Blueprint('accounts_app', __name__)

@@ -1,11 +1,11 @@
 #!/usr/bin/env python
-import os
-import readline
-from pprint import pprint
+from werkzeug import script
+
 from application import create_app
 
 
-app = create_app('settings')
+def make_shell():
+    return dict(app=create_app('settings'))
 
-
-os.environ['PYTHONINSPECT'] = 'True'
+if __name__ == "__main__":
+    script.make_shell(make_shell, use_ipython=True)()

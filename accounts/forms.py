@@ -5,7 +5,7 @@ from flask.ext.wtf import Form
 from flask_mail import Message
 
 from application import mail
-from common.utils import get_signer
+from core.utils import get_signer
 from accounts.models import User
 
 

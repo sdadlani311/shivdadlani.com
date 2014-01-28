@@ -4,13 +4,13 @@ from application import db
 from datetime import datetime
 
 
-class BaseDocument(db.Document):
+class Base(db.Document):
 
-    created_at = db.DateTimeField(
+    created = db.DateTimeField(
         verbose_name=u'Criado em',
         required=True
     )
-    updated_at = db.DateTimeField(
+    updated = db.DateTimeField(
         verbose_name=u'Atualizado em',
         required=True
     )
